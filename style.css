@@ -1,22 +1,25 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: space-between; 
+    justify-content: flex-start; /* Begin links */
     align-items: flex-start;
     height: 100vh;
     margin: 0;
+    background-color: green;
+    color: white;
 }
 
 #pizzabodem {
     display: flex;
-    flex-grow: 1;
-    width: 80%; 
+    flex-direction: column; /* Zorg ervoor dat elementen boven elkaar staan */
+    align-items: flex-start; /* Begin links */
+    width: 50%; /* Pas de breedte aan indien nodig */
 }
 
 #pizza-area {
     position: relative;
-    width: 50%;
-    text-align: center;
+    width: 100%; /* Vul de beschikbare ruimte */
+    text-align: left; /* Links uitlijnen */
 }
 
 #pizza-base {
@@ -56,13 +59,23 @@ body {
 }
 
 #blue-panel {
-    width: 20%; /* Pas de breedte aan naar wens */
-    height: 100vh;
-    background-color: blue;
-    padding: 20px;
+    width: 50%; /* Maak de box kleiner */
+    height: 80vh; /* Verklein de hoogte indien gewenst */
+    background-color: red;
     box-sizing: border-box;
     overflow-y: auto;
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 40px; /* Creëer ruimte aan de rechterkant */
+    top: 40px; /* Voeg wat ruimte aan de bovenkant toe */
+}
+
+button {
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    text-align: center; 
+    cursor: pointer;
+    font-size: 16px; 
+    border-radius: 5px; 
 }

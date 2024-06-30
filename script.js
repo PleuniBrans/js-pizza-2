@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const ingredientsDiv = document.getElementById("ingredients");
     const pizzaBase = document.getElementById("pizza-base");
 
-    pizzaBase.style.width = '40%'; 
+    pizzaBase.style.width = '90%'; 
 
     function addIngredient(ingredient) {
         const img = document.createElement("img");
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         img.style.position = 'absolute';
         img.style.top = '0';
         img.style.left = '0';
-        img.style.width = '40%';
+        img.style.width = '90%';
         ingredientsDiv.appendChild(img);
     }
 
@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (id === "tomatensaus") {
             ingredientSrc = "images/tomatensaus.svg";
-        } else if (id === "pesto") {
-            ingredientSrc = "images/pesto.svg";
+        } else if (id === "wittesaus") {
+            ingredientSrc = "images/wittesaus.svg";
         } else if (id === "champi") {
-            ingredientSrc = "images/champignons.svg";
+            ingredientSrc = "images/campi.svg";
         } else if (id === "paprika") {
             ingredientSrc = "images/paprika.svg";
         } else if (id === "olijven") {
@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (id === "kip") {
             ingredientSrc = "images/kip.svg";
         } else if (id === "mozzarella") {
-            ingredientSrc = "images/mozzarella.svg";
-        } else if (id === "cheddar") {
-            ingredientSrc = "images/cheddar.svg";
+            ingredientSrc = "images/mozarella.svg";
+        } else if (id === "gorgonzola") {
+            ingredientSrc = "images/gorgonzola.svg";
         }
 
         if (ingredientSrc) {
@@ -49,15 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    document.querySelectorAll('#ingredienten-kiezen button').forEach(button => {
+    document.querySelectorAll('#ingredienten-kiezen button').forEach(function(button) {
         button.addEventListener('click', handleButtonClick);
     });
 
-    document.getElementById('finish').addEventListener('click', () => {
+    document.getElementById('finish').addEventListener('click', function() {
         alert("Je pizza is klaar!");
     });
 
-    document.getElementById('reset').addEventListener('click', () => {
+    document.getElementById('reset').addEventListener('click', function() {
         ingredientsDiv.innerHTML = "";
     });
 });
