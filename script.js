@@ -1,28 +1,24 @@
-// Wacht tot de hele pagina is geladen voordat code uitgevoert wordt
 document.addEventListener('DOMContentLoaded', function() {
-    
     const ingredientsDiv = document.getElementById("ingredients"); // div voor ingrediënten
     const pizzaBase = document.getElementById("pizza-base"); // afb van de pizzabodem
 
-
-    pizzaBase.style.width = '90%'; 
+    pizzaBase.style.width = '90%';
 
     // Functie voor nieuw ingrediënt toevoegen aan pizza
     function addIngredient(ingredient) {
-        // Maak een nieuw img-element aan
         const img = document.createElement("img");
-        img.src = ingredient; // Stel de bron van het ingredient in
-        img.style.position = 'absolute'; // Plaats het ingredient bovenop de pizzabodem
-        img.style.top = '0'; // Bovenkant van het ingredienten-div
-        img.style.left = '0'; // Linkerkant van het ingredienten-div
-        img.style.width = '90%'; // Stel de breedte van het ingredient in
-        ingredientsDiv.appendChild(img); // Voeg het ingredient toe aan het ingredienten-div
+        img.src = ingredient;
+        img.style.position = 'absolute';
+        img.style.top = '0';
+        img.style.left = '0';
+        img.style.width = '90%';
+        ingredientsDiv.appendChild(img);
     }
 
     // Functie: reageren wanneer er op een ingredientenknop wordt geklikt
     function handleButtonClick(event) {
-        const id = event.target.id; // Haal de id op van de geklikte knop
-        let ingredientSrc = ""; // Variabele om de bron van het ingrediënt op te slaan
+        const id = event.target.id;
+        let ingredientSrc = "";
 
         // Bepaal de bron van het ingrediënt op basis van de id van de knop
         if (id === "tomatensaus") {
