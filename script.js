@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // https://www.youtube.com/watch?v=rjLHje_SkE4
 // https://www.youtube.com/watch?v=N8ap4k_1QEQ
 // https://www.w3schools.com/jsref/event_onclick.asp
+//https://www.w3schools.com/jsref/jsref_pop.asp
 
 //images
 //https://www.shutterstock.com/image-photo/sliced-red-onion-ring-on-white-1434235535
