@@ -58,15 +58,15 @@ body {
     margin-top: 20px;
 }
 
-#blue-panel {
-    width: 50%; /* Maak de box kleiner */
-    height: 80vh; /* Verklein de hoogte indien gewenst */
+#panel {
+    width: 50%; 
+    height: 80vh; 
     background-color: red;
     box-sizing: border-box;
     overflow-y: auto;
     position: fixed;
-    right: 40px; /* Creëer ruimte aan de rechterkant */
-    top: 40px; /* Voeg wat ruimte aan de bovenkant toe */
+    right: 40px; 
+    top: 40px;
 }
 
 button {
@@ -78,4 +78,5 @@ button {
     cursor: pointer;
     font-size: 16px; 
     border-radius: 5px; 
+    margin: 3px;
 }
