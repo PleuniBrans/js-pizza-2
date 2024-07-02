@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     pizzaBase.style.width = '90%';
 
-    // Functie:nieuw ingredient toevoegen aan pizza
+    // Functie: nieuw ingredient toevoegen aan pizza
     function addIngredient(ingredient) {
         const img = document.createElement("img");
         img.src = ingredient;
@@ -64,9 +64,18 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', handleButtonClick);
     });
 
+    // Functie: geluid afspelen
+    function playSound(soundSrc) {
+        const audio = new Audio(soundSrc);
+        audio.play();
+    }
+
     // Voeg een event listener toe aan de Klaar knop
     document.getElementById('finish').addEventListener('click', function() {
         alert("Eet smakelijk!"); // Toon een alert als feedback
+
+        // Speel geluid af
+        playSound('Pizza Time.mp3');
     });
 
     // Voeg een event listener toe aan de Opnieuw beginnen knop
@@ -103,3 +112,9 @@ document.addEventListener('DOMContentLoaded', function() {
 //https://www.vectorstock.com/royalty-free-vector/ripe-black-olive-slice-vector-20256875
 //https://www.vecteezy.com/png/21356157-slice-of-paprika-isolated-on-a-transparent-background
 //https://www.istockphoto.com/nl/foto/enkel-plakje-pepperoni-vlees-ge%C3%AFsoleerd-op-wit-met-pad-schot-van-boven-gm1153708773-313443493
+
+//sounds
+//https://www.myinstants.com/en/instant/peter-parker-pizza-time-83025/
+
+//extra js aspect
+//https://stackoverflow.com/questions/53987982/why-does-audio-not-play-in-javascript
